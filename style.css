@@ -1,0 +1,66 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+div.flip-box {
+     perspective: 500px;
+    width:300px ;
+    height: 200px;
+
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s ;
+    -webkit-transition: transform 0.8s ;
+    -moz-transition: transform 0.8s ;
+    -ms-transition: transform 0.8s ;
+    -o-transition: transform 0.8s ;
+    transform-style: preserve-3d;
+
+}
+
+.flip-box-front {
+    background-color: #bbb;
+    color: black;
+
+}
+
+.flip-box-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+  
+}
+
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
